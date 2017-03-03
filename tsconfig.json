@@ -5,6 +5,7 @@
     "noImplicitAny": false,
     "sourceMap": true,
     "declaration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "dist"
   }
 }

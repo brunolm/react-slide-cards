@@ -5,8 +5,8 @@
   "main": "dist/cards.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "build": "webpack",
-    "build:watch": "webpack -w",
+    "build": "tsc",
+    "build:watch": "tsc -w",
     "example": "http-server",
     "test": "echo 'OK'"
   },
