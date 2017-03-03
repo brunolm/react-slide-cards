@@ -1,0 +1,33 @@
+{
+  "name": "react-slide-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack -w",
+    "example": "http-server",
+    "test": "echo 'OK'"
+  },
+  "keywords": ["card-slide", "card-swipe"],
+  "author": {
+    "email": "brunolm7@gmail.com",
+    "name": "Bruno Leonardo Michels",
+    "url": "http://codingwise.com/"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-draggable": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.14",
+    "@types/react-dom": "^0.14.23",
+    "http-server": "^0.9.0",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
+  }
+}
