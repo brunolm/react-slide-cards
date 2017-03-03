@@ -8,6 +8,8 @@ export interface CardsProps {
   style: any;
   renderCard: (card: any, props?: any) => any;
 
+  className?: string;
+
   buttonLeft?: any;
   buttonRight?: any;
 
@@ -87,7 +89,7 @@ export default class Cards extends React.Component<CardsProps, CardsState> {
     };
 
     return (
-      <div style={ cardsStyle }>
+      <div className={ this.props.className } style={ cardsStyle }>
         <div className="card-slide-alert card-slide-alert-left"
           onClick={ this.onSlideLeft.bind(this, this.getActiveCard()) }>
           { this.props.buttonLeft }

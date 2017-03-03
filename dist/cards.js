@@ -66,7 +66,7 @@ var Cards = (function (_super) {
             return _this.props.renderCard(card, props);
         });
         var cardsStyle = __assign({ position: 'relative' }, style);
-        return (React.createElement("div", { style: cardsStyle },
+        return (React.createElement("div", { className: this.props.className, style: cardsStyle },
             React.createElement("div", { className: "card-slide-alert card-slide-alert-left", onClick: this.onSlideLeft.bind(this, this.getActiveCard()) }, this.props.buttonLeft),
             React.createElement("div", { className: "card-slide-alert card-slide-alert-right", onClick: this.onSlideRight.bind(this, this.getActiveCard()) }, this.props.buttonRight),
             cards.reverse().map(function (card, index) {

@@ -92,8 +92,9 @@ var Card = (function (_super) {
         });
     };
     Card.prototype.render = function () {
+        var className = this.props.className || 'slide-card';
         return (React.createElement(Draggable, { position: this.state.position, onStart: this.start.bind(this), onDrag: this.drag.bind(this), onStop: this.stop.bind(this) },
-            React.createElement("div", { className: "slide-card", style: this.props.style }, this.props.children)));
+            React.createElement("div", { className: className, style: this.props.style }, this.props.children)));
     };
     return Card;
 }(React.Component));

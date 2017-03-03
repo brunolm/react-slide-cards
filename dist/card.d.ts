@@ -11,6 +11,7 @@ export interface Position {
 export interface CardProps {
     data: any;
     style?: any;
+    className?: string;
     containerSize?: Size;
     onSlideLeft?: (controller, card: Card) => any;
     onSlideRight?: (controller, card: Card) => any;

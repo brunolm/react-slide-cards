@@ -4,6 +4,7 @@ export interface CardsProps {
     cards: any[];
     style: any;
     renderCard: (card: any, props?: any) => any;
+    className?: string;
     buttonLeft?: any;
     buttonRight?: any;
     onSlideLeft?: (controller, card: any) => any;

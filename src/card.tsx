@@ -15,6 +15,7 @@ export interface Position {
 export interface CardProps {
   data: any;
   style?: any;
+  className?: string;
   containerSize?: Size;
   onSlideLeft?: (controller, card: Card) => any;
   onSlideRight?: (controller, card: Card) => any;
@@ -108,13 +109,15 @@ export default class Card extends React.Component<CardProps, CardState> {
   }
 
   render() {
+    const className = this.props.className || 'slide-card';
+
     return (
       <Draggable
         position={ this.state.position }
         onStart={ this.start.bind(this) }
         onDrag={ this.drag.bind(this) }
         onStop={ this.stop.bind(this) }>
-        <div className="slide-card" style={ this.props.style }>{this.props.children}</div>
+        <div className={ className } style={ this.props.style }>{this.props.children}</div>
       </Draggable>
     );
   }
