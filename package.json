@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/cards.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
