@@ -99,7 +99,7 @@ export default class Cards extends React.Component<CardsProps, CardsState> {
           { this.props.buttonRight }
         </div>
         { cards.reverse().map((card, index) =>
-          <div key={ index }>{ card }</div>
+          card
         )}
       </div>
     );

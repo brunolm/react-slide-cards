@@ -70,7 +70,7 @@ var Cards = (function (_super) {
             React.createElement("div", { className: "card-slide-alert card-slide-alert-left", onClick: this.onSlideLeft.bind(this, this.getActiveCard()) }, this.props.buttonLeft),
             React.createElement("div", { className: "card-slide-alert card-slide-alert-right", onClick: this.onSlideRight.bind(this, this.getActiveCard()) }, this.props.buttonRight),
             cards.reverse().map(function (card, index) {
-                return React.createElement("div", { key: index }, card);
+                return card;
             })));
     };
     return Cards;
