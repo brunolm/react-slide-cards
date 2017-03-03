@@ -2,7 +2,7 @@
   "name": "react-slide-cards",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/cards.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "webpack",
