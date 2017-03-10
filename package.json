@@ -1,6 +1,6 @@
 {
   "name": "react-slide-cards",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,10 @@
     "example": "http-server",
     "test": "echo 'OK'"
   },
-  "keywords": ["card-slide", "card-swipe"],
+  "keywords": [
+    "card-slide",
+    "card-swipe"
+  ],
   "author": {
     "email": "brunolm7@gmail.com",
     "name": "Bruno Leonardo Michels",
