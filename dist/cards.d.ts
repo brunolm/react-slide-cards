@@ -9,6 +9,8 @@ export interface CardsProps {
     buttonRight?: any;
     onSlideLeft?: (controller, card: any) => any;
     onSlideRight?: (controller, card: any) => any;
+    leftEnabled?: () => boolean;
+    rightEnabled?: () => boolean;
 }
 export interface CardsState {
     cards: any[];

@@ -49,7 +49,11 @@ var right = function (cardsControl, card) {
         cards: cardsOrder,
     });
 };
-var cards = (React.createElement(index_1.Cards, { cards: cardsData, renderCard: renderCard, style: style, buttonLeft: buttonLeft, buttonRight: buttonRight, onSlideLeft: left, onSlideRight: right }));
+var leftEnabled = function () { return true; };
+var rightEnabled = function () {
+    return Math.random() > 0.5;
+};
+var cards = (React.createElement(index_1.Cards, { cards: cardsData, renderCard: renderCard, style: style, buttonLeft: buttonLeft, buttonRight: buttonRight, onSlideLeft: left, onSlideRight: right, leftEnabled: leftEnabled, rightEnabled: rightEnabled }));
 var container = (React.createElement("div", null, cards));
 react_dom_1.render(container, document.getElementById('root'));
 //# sourceMappingURL=example.js.map

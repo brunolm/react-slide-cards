@@ -56,6 +56,11 @@ const right = (cardsControl, card: any) => {
   });
 };
 
+const leftEnabled = () => true;
+const rightEnabled = () => {
+  return Math.random() > 0.5;
+};
+
 const cards = (
   <Cards cards={ cardsData }
     renderCard={ renderCard }
@@ -65,7 +70,12 @@ const cards = (
     buttonRight={ buttonRight }
 
     onSlideLeft={ left }
-    onSlideRight= { right } />
+    onSlideRight= { right }
+
+    leftEnabled={ leftEnabled }
+    rightEnabled={ rightEnabled }
+
+    />
 );
 
 const container = (

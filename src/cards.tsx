@@ -15,6 +15,9 @@ export interface CardsProps {
 
   onSlideLeft?: (controller, card: any) => any;
   onSlideRight?: (controller, card: any) => any;
+
+  leftEnabled?: () => boolean;
+  rightEnabled?: () => boolean;
 }
 
 export interface CardsState {
@@ -88,13 +91,16 @@ export default class Cards extends React.Component<CardsProps, CardsState> {
       ...style,
     };
 
+    const leftAlertClass = `card-slide-alert card-slide-alert-left ${this.props.leftEnabled() ? '' : 'disabled'}`;
+    const rightAlertClass = `card-slide-alert card-slide-alert-right ${this.props.rightEnabled() ? '' : 'disabled'}`;
+
     return (
       <div className={ this.props.className } style={ cardsStyle }>
-        <div className="card-slide-alert card-slide-alert-left"
+        <div className={ leftAlertClass }
           onClick={ this.onSlideLeft.bind(this, this.getActiveCard()) }>
           { this.props.buttonLeft }
         </div>
-        <div className="card-slide-alert card-slide-alert-right"
+        <div className={ rightAlertClass }
           onClick={ this.onSlideRight.bind(this, this.getActiveCard()) }>
           { this.props.buttonRight }
         </div>
