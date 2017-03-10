@@ -8,6 +8,7 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "clean": "rimraf dist",
+    "prepublish": "npm run build",
     "webpack": "webpack",
     "example": "http-server",
     "test": "echo 'OK'"
