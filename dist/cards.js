@@ -66,8 +66,8 @@ var Cards = (function (_super) {
             return _this.props.renderCard(card, props);
         });
         var cardsStyle = __assign({ position: 'relative' }, style);
-        var leftAlertClass = "card-slide-alert card-slide-alert-left " + (this.props.leftEnabled() ? '' : 'disabled');
-        var rightAlertClass = "card-slide-alert card-slide-alert-right " + (this.props.rightEnabled() ? '' : 'disabled');
+        var leftAlertClass = "card-slide-alert card-slide-alert-left " + (!this.props.leftEnabled || this.props.leftEnabled() ? '' : 'disabled');
+        var rightAlertClass = "card-slide-alert card-slide-alert-right " + (!this.props.rightEnabled || this.props.rightEnabled() ? '' : 'disabled');
         return (React.createElement("div", { className: this.props.className, style: cardsStyle },
             React.createElement("div", { className: leftAlertClass, onClick: this.onSlideLeft.bind(this, this.getActiveCard()) }, this.props.buttonLeft),
             React.createElement("div", { className: rightAlertClass, onClick: this.onSlideRight.bind(this, this.getActiveCard()) }, this.props.buttonRight),
