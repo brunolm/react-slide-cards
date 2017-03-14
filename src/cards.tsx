@@ -91,8 +91,8 @@ export default class Cards extends React.Component<CardsProps, CardsState> {
       ...style,
     };
 
-    const leftAlertClass = `card-slide-alert card-slide-alert-left ${this.props.leftEnabled() ? '' : 'disabled'}`;
-    const rightAlertClass = `card-slide-alert card-slide-alert-right ${this.props.rightEnabled() ? '' : 'disabled'}`;
+    const leftAlertClass = `card-slide-alert card-slide-alert-left ${!this.props.leftEnabled || this.props.leftEnabled() ? '' : 'disabled'}`;
+    const rightAlertClass = `card-slide-alert card-slide-alert-right ${!this.props.rightEnabled || this.props.rightEnabled() ? '' : 'disabled'}`;
 
     return (
       <div className={ this.props.className } style={ cardsStyle }>
